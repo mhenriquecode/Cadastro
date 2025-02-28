@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#800080"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/cadastro"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/editNome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="@string/nome_completo"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo" />
+
+    <EditText
+        android:id="@+id/editTelefone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/telefone"
+        android:inputType="phone"
+        app:layout_constraintTop_toBottomOf="@id/editNome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ex_12934567890"
+        android:textSize="12sp"
+        android:textColor="#888888"
+        app:layout_constraintTop_toBottomOf="@id/editTelefone"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/e_mail"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/editTelefone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        tools:ignore="TextFields" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exemple_mail_com"
+        android:textSize="12sp"
+        android:textColor="#888888"
+        app:layout_constraintTop_toBottomOf="@+id/editEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="4dp" />
+
+    <CheckBox
+        android:id="@+id/checkListaEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ingressar_na_lista_de_e_mails"
+        app:layout_constraintTop_toBottomOf="@id/editEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/selecione_o_sexo"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="333dp"
+        tools:ignore="MissingConstraints" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupSexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/checkListaEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/radioMasculino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/masculino" />
+
+        <RadioButton
+            android:id="@+id/radioFeminino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/feminino"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editCidade"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/cidade"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupSexo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+
+    <Spinner
+        android:id="@+id/spinnerUF"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editCidade" />
+
+    <Button
+        android:id="@+id/btnLimpar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="24dp"
+        android:background="#800080"
+        android:text="@string/limpar"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerUF" />
+
+    <Button
+        android:id="@+id/btnSalvar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="88dp"
+        android:background="#800080"
+        android:text="@string/salvar"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerUF" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
