@@ -12,7 +12,7 @@ import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class asdasdMainActivity : AppCompatActivity() {
     private lateinit var etNomeCompleto: EditText
     private lateinit var etTelefone: EditText
     private lateinit var etEmail: EditText
